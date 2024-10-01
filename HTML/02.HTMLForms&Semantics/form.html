@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Forms</title>
+</head>
+<body>
+
+    <!-- form, -->
+    <form>
+        <label for="name">Ad</label>
+        <input type="text" name="ad" id="name" placeholder="adınızı yazın" required maxlength="100" minlength="10"> <br>
+        <label for="age">Age</label>
+        <input type="number" name="age" min="0" id="age" max="100" step="5" value="20" > <br>
+        <label for="name">Password</label>
+        <input type="password"> <br>
+        <input type="email"> <br>
+        <input type="color"> <br>
+        <input type="date">
+        <input type="datetime-local" name="" id=""> <br>
+        <label for="html">html</label>
+        <input type="checkbox" id="html">
+        <label for="">css</label>
+        <input type="checkbox">
+        <br>
+
+        <label for="html">male</label>
+        <input type="radio" id="html" name="cinsiyyet">
+        <label for="">female</label>
+        <input type="radio" name="cinsiyyet">
+        
+        <select name="" id="">
+            <option value="az" disabled selected>Doğulduğunuz ölkəni seçin</option>
+            <option value="az">Azərbaycan</option>
+            <option value="tr">Turkiye</option>
+            <option value="ge">Gurcustan</option>
+    
+        </select>
+
+         <textarea name="" id="" cols="30" rows="10"></textarea>
+        
+<!-- <button type="submit">Go</button> -->
+         <input type="reset" value="Reset">
+         <input type="submit" value="Submit">
+         <input type="button" value="button">
+
+
+          <fieldset>
+            <legend>Şəxsi Məlumatlar</legend>
+            <input type="text" placeholder="adınızı yazın">
+            <input type="text" placeholder="soyadınızı yazın">
+          </fieldset>
+          
+          <fieldset>
+            <legend>Təhsil</legend>
+            <select name="" id="">
+                <option value="">Bakalavr</option>
+                <option value="">Magister</option>
+            </select>
+          </fieldset>
+          <br>
+          <input type="file" multiple accept="image/*">
+          <br>
+          <input type="range" min="10" max="100" step="5">
+          <button type="submit">Register</button>
+
+
+      
+    </form>
+</body>
+</html>
