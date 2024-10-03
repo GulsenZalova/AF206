@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
+    <title>CSS Borders</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        .box{
+            width: 300px;
+            height: 300px;
+            margin: 50px auto;
+            background-color: aquamarine;
+            /* size,style,color */
+            /* border-width: 5px;
+            border-color: blueviolet;
+            border-style: solid; */
+            /* shorthand */
+            border: 5px solid blueviolet;
+            /* border-top:  5px solid blueviolet;;
+            border-right:  10px dashed blue;; */
+            /* border-radius: 50% ; */
+            border-top-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            transition: all .3s ease;
+        }
+        .btn{
+           
+        display: inline-block;
+        margin: 0px auto;
+        padding: 10px ;
+        }
+        .btn:hover ~ .box{
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border-top-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+        }
+    
+    </style>
+</head>
+<body>
+  <div class="container">
+
+  </div>
+  <button class="btn">Hover Div</button>
+  <div class="box">
+    
+</div>
+
+
+
+   
+</body>
+</html>

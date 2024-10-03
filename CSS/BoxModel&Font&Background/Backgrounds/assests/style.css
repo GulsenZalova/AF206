@@ -1,0 +1,28 @@
+.back{
+    width: 80vw;
+    height: 90vh;
+
+    /* margin-top: 100px; */
+    background-color: rgba(253, 71, 253, 0.8);
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqSZ2vNkiVru2LtxNG2_QaJPjP16VnCRSm3w&s");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+    /* background-attachment: fixed; */
+}
+
+
+body{
+    height: 200vh;
+}
+
+
+
+/*  px , rem ,em, %, vw ,vh */
+span{
+    font-size: 10px;
+}
+
+p{
+    font-size: 3em;
+}
