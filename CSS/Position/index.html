@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
+    <title>CSS Positions</title>
+
+    <style>
+        .container{
+            width: 800px;
+            height: 800px;
+            /* position:absolute; */
+            margin: 0px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: darkcyan;
+            
+        }
+        .boxes{
+            width: 500px;
+            height: 500px;
+          
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: 0px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: cornflowerblue;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* display: inline-block; */
+            border: 1px solid white;
+            background-color: blue;
+     
+        }
+         
+        .box:nth-child(2){
+            position:absolute;
+            bottom: 10px;
+            left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- static,relative,absolute,fixed,stkicy -->
+
+  <div class="container">
+    <div class="boxes">
+        <div class="box">box1</div>
+        <div class="box">box2</div>
+        <div class="box">box3</div>
+    </div>
+  </div>
+</body>
+</html>
