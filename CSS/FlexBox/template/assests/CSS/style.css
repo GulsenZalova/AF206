@@ -1,0 +1,133 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 20px 0px;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 0px auto;
+}
+
+.nav-left{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.nav-list{
+    display: flex;
+    gap: 20px;
+    /* align-items: center; */
+}
+
+li{
+    list-style-type: none;
+}
+
+
+
+.nav-btn{
+    display: flex;
+    align-items: center;
+   border: 1px solid black;
+   background-color: white;
+    border-radius: 8px;
+    gap: 15px;
+    padding: 10px 15px;
+    transition: all .3s ease;
+}
+
+.nav-btn:hover{
+    background-color: black;
+    border: 1px solid white;
+    color: white;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+/* Hero Section Start */
+#hero{
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40vh;
+    opacity: 0.8;
+}
+
+
+
+.hero-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    color: white;
+}
+.hero-wrapper  h2{
+    font-size: 55px;
+}
+
+.hero-wrapper  p{
+    font-size: 20px;
+}
+
+/* Hero Section End */
+
+#products{
+    margin: 50px 0px;
+}
+.products{
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 15px;
+}
+.product{
+    /* width: 350px; */
+    border: 1px solid lightgrey;
+}
+.product-image img{
+ width: 100%;
+}
+.product-info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px 0px;
+    gap: 20px;
+}
+
+.product-info button{
+    padding: 15px 25px ;
+    border-radius: 10px;
+    border: none;
+}
+/* Products Section Start */
+
+/* Footer */
+
+footer{
+    background-color: black;
+    height: 20vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
