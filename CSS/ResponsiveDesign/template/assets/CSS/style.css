@@ -1,0 +1,138 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: black;
+    color: white;
+    padding: 20px 0px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+.header-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.container{
+    width: 80%;
+    margin: 0px auto;
+}
+
+.nav-list{
+    display: flex;
+    gap: 15px;
+}
+
+.nav-list li{
+    list-style-type: none;
+}
+.nav-list li a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+.nav-menu{
+    display: none;
+}
+
+
+/* Hero Start */
+#hero{
+    margin: 50px 0px ;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero-wrapper{
+    display: flex;
+    align-items: center;
+}
+
+.hero-info{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* padding: 70px; */
+}
+
+.hero-info h2{
+    font-size: 40px;
+}
+.hero-info p{
+    font-size: 20px;
+}
+
+.hero-img img{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+/* Hero End */
+
+/* Responsive */
+@media (max-width:576px){
+    .nav-list{
+        display: none;
+    }
+
+    .nav-menu{
+        display: flex;
+    }
+    .hero-img{
+        display: none;
+    }
+    .hero-info{
+        text-align: center;
+    }
+
+    .feature-wrapper{
+        flex-direction: column !important;
+    }
+}
+
+@media (min-width:576px) and (max-width:768px){
+    .nav-list{
+        display: none;
+    }
+    .nav-menu{
+        display: flex;
+    }
+    .hero-img{
+        display: none;
+    }
+    .hero-info{
+        text-align: center;
+    }
+    .feature-wrapper{
+        flex-direction: column !important;
+    }
+}
+
+
+@media (min-width:768px) and (max-width:992px){
+    .nav-list{
+        display: none;
+    }
+    .nav-menu{
+        display: flex;
+    }
+    .hero-img{
+        display: none;
+    }
+    .hero-info{
+        text-align: center;
+    }
+    .feature-wrapper{
+        flex-direction: column !important;
+    }
+}

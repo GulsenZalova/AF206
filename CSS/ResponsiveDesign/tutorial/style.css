@@ -1,0 +1,82 @@
+body{
+    background-color: cadetblue;
+}
+
+
+/* 
+
+Breakpoints
+
+
+ phone - xs - 576 px qədər
+ mini-tablet - s - 576px dan 768px
+ tablet - m - 768px dən 992px
+ laptop - l - 992px dən 1200px
+ masaüstü - 1200pxdən
+
+*/
+
+
+@media  (max-width: 576px) {
+    body {
+      background-color: lightgreen;
+    }
+    h1{
+        font-size: 20px;
+    }
+    
+  }
+
+
+  
+
+@media (min-width:576px) and (max-width: 768px) {
+    body {
+      background-color: red;
+    }
+    h1{
+        font-size: 30px;
+        color: white;
+    }
+    
+  }
+
+
+  
+@media (min-width:768px) and (max-width: 992px) {
+    body {
+      background-color: yellow;
+    }
+    h1{
+        font-size: 40px;
+        color: red;
+    }
+    
+  }
+
+
+@media (min-width:992px) and (max-width: 1200px) {
+    body {
+      background-color: blue;
+    }
+    h1{
+        font-size: 50px;
+        color: blueviolet;
+    }
+    
+  }
+
+
+  
+@media (min-width: 1200px) {
+    body {
+      background-color: black;
+    }
+    h1{
+        font-size: 20px;
+        color: beige;
+    }
+  }
+
+
+

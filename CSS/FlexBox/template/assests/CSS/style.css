@@ -12,7 +12,9 @@ header{
     color: white;
     padding: 20px 0px;
 }
-
+.nav-menu{
+    display: none;
+}
 .container{
     display: flex;
     justify-content: space-between;
