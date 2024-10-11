@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transform 2D</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .container{
+
+            /* div ortalamaq üçün */
+
+            /* position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%); */
+            width: 800px;
+            height: 500px;
+            background-color: cornflowerblue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+            transition: all 3s ease;
+            border-top-left-radius: 30px;
+
+            /* transitoin aciqlama */
+
+            /* transition-property: width;
+            transition-duration: 10s;
+            transition-delay: 2s;
+            transition-timing-function: cubic-bezier(.5,1.95,1,-0.67); */
+            /* transform: translateX(200px); */
+            /* transform: translateX(-200px);
+            transform: translateY(200px);
+            transform: translateY(-200px); */
+            /* transform: translate(200px,-200px); */
+            /* transform: translate(200px); */
+
+            /* transform: scaleX(1.5);
+            transform: scaleX(0.5);
+            transform: scaleX(0);
+            transform: scaleY(1.5);
+            transform: scaleY(0.5);
+            transform: scaleY(0);  */
+
+
+            /* transform: rotate(-45deg); */
+        }
+
+        .box:hover{
+            /* width: 300px; */
+            /* transform: translateX(200px); */
+            /* transform: translateX(-200px);
+            transform: translateY(200px); */
+            /* transform: translate(200px,-200px); */
+            /* transform: scaleX(1.5);
+            transform: scale(0,1.5); */
+            transform: translateX(200px) rotate(720deg) scale(0);
+        }
+
+
+        
+    </style>
+</head>
+<body>
+    <!--  translate,scale,skew,rotate -->
+    <div class="container">
+        <div class="box">Hello</div>
+    </div>
+</body>
+</html>

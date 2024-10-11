@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .card{
+            position: relative;
+            width: 300px;
+            background-color: aqua;
+            height: 300px;
+            overflow: hidden;
+        }
+        .card img{
+            width: 100%;
+            height: 100%;
+        }
+
+        .overlay{
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+            transform: scale(0);
+            /* transform: translateY(-100%); */
+            width: 100%;
+            height: 100%;
+            transition: transform 3s ease;
+            background-color: cornflowerblue;
+        }
+
+        .card:hover .overlay{
+            /* transform: translateY(0%); */
+            transform: scale(1);
+        }
+
+
+    </style>
+</head>
+<body>
+    
+
+    <div class="card">
+        <img src="./img_avatar3.png" alt="">
+        <div class="overlay">Hello World</div>
+    </div>
+</body>
+</html>
