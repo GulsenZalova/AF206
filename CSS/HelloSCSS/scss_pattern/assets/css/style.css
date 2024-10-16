@@ -1,0 +1,60 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css);
+@import url("https://fonts.googleapis.com/css2?family=Qwitcher+Grypen&family=Roboto:wght@100;300;400;700&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+header {
+  background-color: bisque;
+  display: flex;
+  flex-direction: left;
+  justify-content: column;
+  align-items: center;
+}
+header ul {
+  display: flex;
+  flex-direction: center;
+  justify-content: row;
+  align-items: space-between;
+}
+
+.container {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+}
+@media (max-width: 576px) {
+  .container {
+    background-color: blue;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    background-color: yellow;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    background-color: green;
+  }
+}
+@media (max-width: 992px) {
+  .container {
+    background-color: purple;
+  }
+}/*# sourceMappingURL=style.css.map */

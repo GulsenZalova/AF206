@@ -1,0 +1,11 @@
+header{
+    background-color: $main-color;
+    @include flex(flex,column,center,left);
+
+    ul{
+        @include flex(flex,row,space-between,center);
+    }
+}
+
+
+

@@ -1,0 +1,17 @@
+*,
+*::after,
+*::before{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    list-style-type: none; 
+    text-decoration: none;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}

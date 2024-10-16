@@ -1,0 +1,40 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+.head {
+  background-color: cornflowerblue;
+}
+.head .head-container {
+  width: 80%;
+  margin: 0px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 0px;
+}
+.head .head-container .head-logo {
+  font-size: 32px;
+}
+.head .head-container .head-list .list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0px;
+  gap: 20px;
+}
+.head .head-container .head-list .list li {
+  list-style-type: none;
+}
+.head .head-container .head-list .list li a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+}
+.head .head-container .head-list .list li a:hover {
+  color: green;
+}/*# sourceMappingURL=style.css.map */

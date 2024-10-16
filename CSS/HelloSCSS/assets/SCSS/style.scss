@@ -1,0 +1,95 @@
+$primary-color: green;
+$text-color:white;
+$font-m:32px;
+$font-s:20px;
+$padding-s:10px;
+
+// body{
+//     background-color: $primary-color;
+//     color: $text-color ;
+//     opacity: 0.8;
+// }
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+
+
+%flex{
+    display: flex;
+    align-items: center;
+}
+
+
+// @mixin flex-center {
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+// }
+
+// @mixin flex-between {
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between;
+// }
+
+
+@mixin flex-mix($align,$justify:"flex-start",$direction,$gap:0px){
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+    flex-direction: $direction;
+    gap:$gap
+}
+
+.head{
+    background-color: cornflowerblue;
+    .head-container{
+        width: 80%;
+        margin: 0px auto;
+        // display: flex;
+        // align-items: center;
+        // @extend %flex;
+        // @include flex-center;
+        // justify-content: space-between;
+        @include flex-mix(center,row);
+        .head-logo{
+            font-size: $font-m;
+        }
+
+        .head-list{
+           .list{
+            // display: flex;
+            // align-items: center;
+            // @extend %flex;
+            // @include flex-between;
+            // justify-content: center;
+
+            @include flex-mix(center, center, row );
+            gap: 20px;
+            li{
+                list-style-type: none;
+
+                a{
+                    text-decoration: none;
+                    color: $text-color;
+                    font-size: $font-s;
+                    &:hover{
+                        color: $primary-color;
+                    }
+                }
+               
+            }
+           }
+
+
+        }
+    }
+
+}
+
+
+

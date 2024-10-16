@@ -1,0 +1,22 @@
+.container{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    @include responsive(small){
+        background-color: blue;
+    }
+    @include responsive(medium){
+        background-color: yellow;
+    }
+    @include responsive(large){
+        background-color: green;
+        
+    }
+    @include responsive(desktop){
+        background-color:purple;
+    }
+}
+
+
+
+
