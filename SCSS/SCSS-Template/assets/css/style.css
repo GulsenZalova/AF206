@@ -1,0 +1,56 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css");
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  border: none;
+  background-color: transparent;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.container {
+  margin: 0px auto;
+  width: 80%;
+}
+
+header {
+  background-color: aqua;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0px;
+  flex-wrap: no-wrap;
+  height: 50px;
+  padding: 10px 0px;
+}
+header .head-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 0px;
+  flex-wrap: no-wrap;
+}
+header .head-wrapper .nav-list ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 20px;
+  flex-wrap: no-wrap;
+}
+@media screen and (max-width: 992px) {
+  header .head-wrapper .nav-list ul {
+    display: none;
+  }
+}
+header .head-wrapper .nav-list .menu {
+  display: none;
+}
+@media screen and (max-width: 992px) {
+  header .head-wrapper .nav-list .menu {
+    display: flex;
+  }
+}/*# sourceMappingURL=style.css.map */

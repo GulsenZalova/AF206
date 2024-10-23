@@ -1,0 +1,34 @@
+
+@mixin flex($align,$justify,$direction,$gap:0px,$wrap:no-wrap){
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+    flex-direction: $direction;
+    gap: $gap;
+    flex-wrap: $wrap;
+}
+
+
+
+@mixin responsive($breakpoints){
+    @if $breakpoints==small{
+        @media screen and (max-width:576px){
+             @content
+        }
+    };
+    @if $breakpoints==medium{
+        @media screen and (max-width:768px){
+             @content
+        }
+    };
+    @if $breakpoints==large{
+        @media screen and (max-width:992px){
+             @content
+        }
+    };
+    @if $breakpoints==desktop{
+        @media screen and (min-width:1200px){
+             @content
+        }
+    }
+}

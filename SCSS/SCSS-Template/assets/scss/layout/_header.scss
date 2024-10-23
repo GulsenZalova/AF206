@@ -1,0 +1,26 @@
+
+header{
+    background-color: aqua;
+    @include flex(center,center,row);
+    height: 50px;
+    padding: 10px 0px;
+    .head-wrapper{
+        @include flex(center,space-between,row);
+        .nav-list{
+            ul{
+                @include flex(center,center,row,20px);
+                @include responsive(large){
+                    display: none;
+                }
+            }
+            .menu{
+                display: none;
+                @include responsive(large){
+                   display: flex;
+                }
+            }
+        }
+    
+    }
+    
+}
