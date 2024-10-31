@@ -1,0 +1,30 @@
+Aşağıdaki parametrlərə sahib Device class-ı yaradın.
+
+Device class
+- Brand
+- Model
+- Screen size
+- Battery level
+- Price (maya dəyəri)
+- Sale Price (satış qiyməti) (satış qiyməti maya dəyərindən hər zaman daha böyük olmalıdır)
+- CalculateProfit() - bu method isə həmin device-ın satışından əldə edilən gəliri hesablayacaq.Əgər məhsul ziyana
+satılarsa o zaman nə qədər ziyan etdiyini göstrəcək.
+- DisplayBatteryLevel() - bu method isə device-ın hazırdakı battereyasını göstərəcək
+- DisplayDetails() - bu mehtod isə device haqqında detalları yazacaq (screensize,model,brand,)
+
+Bir Phone class-ı yaradırsınız. Device class-ından miras alır və əlavə olaraq, isSmart deyeri var (true false deyerleri
+olur)
+Bir Laptop class-ı yaradırsınız. Device class-ından miras alır və əlavə olaraq, isRGBkeyboard deyeri var (true/false)
+--------------------------------
+
+
+Phone və Laptop class-larından istifadə edib bir neçə product yaradın və products array-inə yığın. Və global-da
+aşağıdakı
+function-ları yazın.
+1. FilterbyPrice - parametr olaraq array və price deyerleri qebul edir. Gonderilmish array-də price-ı göndərilmiş
+price-dan yuxarı olan product-ların name-lərini qaytarın.
+2. FilterbyName - parametr olaraq bir array və name deyerleri qebul edir və gonderilen name-e esasen hemin name-de olan
+product-ların sayını qaytarır. (Məsələn products array-i və "Iphone" gonderilerse name-i Iphone olanlarin sayini
+qaytarmalidir)
+3. GetTotalProfit - parametr olaraq bir array qebul edir ve hemin array-deki product-larin umumi profitini (gelirini)
+qaytarir.
