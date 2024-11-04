@@ -1,0 +1,42 @@
+Product :
+ - id
+ - Name
+ - Price
+
+ Milk :
+ - FatPercent
+ - Madeİn
+
+Class Constructor istifade ederek Productdan extend alaraq 3 milk yaradın.
+Və onları bir array-ə yığın.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+TASK 1.1 : Məhsulların hər birini consoleda göstərin.
+TASK 1.2 : Məhsullardan id-si 1-ə bərabər olan məhsulu qaytaran funksiya yazın.
+TASK 1.3 : FatPercent-in ədədi ortasını çıxarın. Bunu FatAverage adlı funksiya ilə edin. Funksiya həmin arrayi parametr kimi qəbul edəcək, ədədi ortanı qaytaracaq.
+Task 1.4 : yağlılıq faizi 3-dən yuxarı olan milk-ləri arraydə göstərin. Funksiya yazın.
+Task 1.5 : Funksiya yazın array və bir number qəbul etsin. Arraydəki elementlərin price-nı bu number qədər artırsın.
+Task 1.6 : Ümumi price-ı qaytaran funksiya yazın.
+Task 1.7 : Məhsullardan id-si 1-ə bərabər olan məhsulu qaytaran funksiya yazın.
+Task 1.8 : ən baha milkin adını qaytaran funksiya yazın. Arrayi parametr kimi qəbul etsin
+Task 1.9 : ən baha və ən ucuz arasındakı fərqi qaytaran funksiya yazın. Funksiya yazın.
+Task 1.10: Məhsullar içərisində Azərbaycan istehsalı olan məhsul varmı?
+
+Qeyd: Funksiyaları yazarkən, array iteration methodlarından istifadə edin.

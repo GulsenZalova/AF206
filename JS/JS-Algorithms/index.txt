@@ -1,0 +1,37 @@
+- Verilmiş bir array-də ədədlərin yerini dəyişdirərək,cüt ədədləri əvvələ, tək ədədləri isə axıra yerləşdirin.
+- Bir array-dəki ən kiçik və ən böyük ədədləri tapın,sonra bu ədədləri array-dən silin.
+- Verilmiş iki array-də ən kiçik və ən böyük ortaq ədədləri tapmaq üçün bir alqoritm yazın.
+- Bir array verilir. Bu arrayin daxilindəki unikal(təkrarlanmayan) elementləri tapın və yeni bir array-də cəmləyərək qaytarın.
+- İstifadəçidən bir mətn daxil etməsini istəyin. Bu mətnin içərisindəki rəqəmləri ayırın və onları artan sıra ilə, sonra isə mətnin içərisindəki hərfləri alfabetik sıraya görə düzəldin. Nəticəni ekrana çap edin.
+- İstifadəçidən bir array daxil etməsini istəyin. Bu arrayin daxilindəki ədədlərin kvadratlarını tapın və bu kvadratların cəmini hesablayın. Daha sonra, bu cəmi 2-yə bölün və bu ədədi ekrana çap edin.
+- Bir mətn verilir. Mətnin içərisindəki sözlərin sayını tapın və hər bir sözün daxilindəki hərf sayını ayrıca hesablayın. Sonra, ən uzun sözü və onun hərf sayını ekrana çap edin
+- İstifadəçidən bir array daxil etməsini istəyin. Bu arraydə ən çox təkrarlanan ədədi tapın və bu ədədi və təkrarlanma sayını ekrana çap edin.
+- Bir obyekt verilir ki, içində bir neçə məhsul və qiymətləri qeyd olunub. İstifadəçidən bir məhsul adı daxil etməsini istəyin və bu məhsulun qiymətini ekrana çap edin. Əgər məhsul adı obyektin içində yoxdursa, "Məhsul tapılmadı" mesajı göstərin.
+- Bir function yazın parametr olaraq bir array, bir index və bir string qəbul edir. Və daxil olunmuş indeksə əsasən göndərilmiş string-i həmin array-ə əlavə edib return etsin. Məsələn arqument olaraq - ['a','salam','b','world'], 3, "dev" göndərilərsə o zaman dev string-ini 3cu indekse elave etmelidir, eger gonderilmish indeks array-in uzunlugundan boyuk olarsa o zaman hemin string array-in en sonuna elave edilsin.
+-Bir string ve bir char qebul eden bir function yazın.Əgər daxil olunmuş char string-də varsa char-ın yerləşdiyi indekslərin cəmini yoxdursa -1 return etsin. Məsələn salam və 'a' daxil olunarsa output 1+3=4 olmalıdır.
+- let data = [
+{name: 'daniel', age: 45},
+{name: 'john', age: 34},
+{name: 'robert', age: null},
+{name: 'jen', age: undefined},
+{name: null, age: undefined}];
+ element -in deyeri null ve undefined olmayanlari qaytar
+
+ - const students = [
+  { name: "Leyla", points: 500 },
+  { name: "Akif", points: 500 },
+  { name: "Fikret", points: 3000 },
+  { name: "Rashad", points: 500 },
+  { name: "Turkan", points: 1900 },
+  { name: "Sabir", points: 1000 },
+  { name: "Idris", points: 340 },
+  { name: "Nijat", points: 940 },
+  { name: "Ismet", points: 1780 },
+];
+
+her telebenin pointini 30 bal artirin
+
+
+
+let numbers = [1.5, 2.56, 5.1, 12.33];
+butun regemlerini yuvarlaqlashdirin

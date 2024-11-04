@@ -19,7 +19,7 @@
 
 class Human {
     constructor(name, surname, age) {
-
+        
         if (typeof name !== "string"|| name.length == 0) {
             throw new Error("Invalid name")
         }
@@ -30,9 +30,11 @@ class Human {
 
 
         this.name = name,
-            this.surname = surname,
-            this.age = age
+        this.surname = surname,
+        this.age = age
     }
+
+
 
     // methods
     adiniQisaSekildeDe() {
