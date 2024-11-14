@@ -5,65 +5,65 @@ let alertSuccess=document.querySelector(".alert-success")
 let myNumber=document.querySelector(".mynumber")
 let randomNumber=document.querySelector(".random")
 
-guessForm.addEventListener("submit",(e)=>{
-    e.preventDefault()
-     let random= Math.floor(Math.random() * 15) + 1 
-     let mynumber=input.value
-     console.log(random)
-     if((input.value.trim()!=="")){
-         if(mynumber>0 && mynumber<=15){
+// guessForm.addEventListener("submit",(e)=>{
+//     e.preventDefault()
+//      let random= Math.floor(Math.random() * 15) + 1 
+//      let mynumber=input.value
+//      console.log(random)
+//      if((input.value.trim()!=="")){
+//          if(mynumber>0 && mynumber<=15){
                  
-                myNumber.textContent= mynumber
-                randomNumber.textContent= random
-                if(mynumber==random){
-                    alertSuccess.classList.replace("d-none","d-block")
-                    alertSuccess.textContent="Qalibsen"
-                    setTimeout(()=>{
-                        alertSuccess.classList.replace("d-block","d-none")
-                    },2000)
+//                 myNumber.textContent= mynumber
+//                 randomNumber.textContent= random
+//                 if(mynumber==random){
+//                     alertSuccess.classList.replace("d-none","d-block")
+//                     alertSuccess.textContent="Qalibsen"
+//                     setTimeout(()=>{
+//                         alertSuccess.classList.replace("d-block","d-none")
+//                     },2000)
 
 
 
-                    Success("Qalibsen")
-                }else if(mynumber>random){
-                    alertSuccess.classList.replace("d-none","d-block")
-                    alertSuccess.textContent="Boyukdur"
-                    setTimeout(()=>{
-                        alertSuccess.classList.replace("d-block","d-none")
-                    },2000)
-                    Success("Boyukdur")
-                }else{
-                    alertSuccess.classList.replace("d-none","d-block")
-                    alertSuccess.textContent="Kicikdir"
-                    setTimeout(()=>{
-                        alertSuccess.classList.replace("d-block","d-none")
-                    },2000)
+//                     Success("Qalibsen")
+//                 }else if(mynumber>random){
+//                     alertSuccess.classList.replace("d-none","d-block")
+//                     alertSuccess.textContent="Boyukdur"
+//                     setTimeout(()=>{
+//                         alertSuccess.classList.replace("d-block","d-none")
+//                     },2000)
+//                     Success("Boyukdur")
+//                 }else{
+//                     alertSuccess.classList.replace("d-none","d-block")
+//                     alertSuccess.textContent="Kicikdir"
+//                     setTimeout(()=>{
+//                         alertSuccess.classList.replace("d-block","d-none")
+//                     },2000)
 
-                    Success("Kicikdir")
-                }
+//                     Success("Kicikdir")
+//                 }
               
-         }else{
-            // 1-15 arasinda deyil
-            alert.classList.replace("d-none","d-block")
-            alert.textContent="1-15 arasinda reqem daxil elemelisen"
-            setTimeout(()=>{
-             alert.classList.replace("d-block","d-none")
-            },2000)
+//          }else{
+//             // 1-15 arasinda deyil
+//             alert.classList.replace("d-none","d-block")
+//             alert.textContent="1-15 arasinda reqem daxil elemelisen"
+//             setTimeout(()=>{
+//              alert.classList.replace("d-block","d-none")
+//             },2000)
 
-            Danger("1-15 arasinda reqem daxil elemelisen")
-         }
-     }else{
-        // Bos olanda islesin
-       alert.classList.replace("d-none","d-block")
-       alert.textContent="Boş value daxil edə bilmərsən"
-       setTimeout(()=>{
-        alert.classList.replace("d-block","d-none")
-       },2000)
-     }
-    Danger("Boş value daxil edə bilmərsən")
-     input.value=" "
-     }
-})
+//             Danger("1-15 arasinda reqem daxil elemelisen")
+//          }
+//      }else{
+//         // Bos olanda islesin
+//        alert.classList.replace("d-none","d-block")
+//        alert.textContent="Boş value daxil edə bilmərsən"
+//        setTimeout(()=>{
+//         alert.classList.replace("d-block","d-none")
+//        },2000)
+//      }
+//     Danger("Boş value daxil edə bilmərsən")
+//      input.value=" "
+//      }
+// })
 
 // DRY 
 
