@@ -1,4 +1,4 @@
-let products = [
+let initialProducts = [
     {
         "id": 1,
         "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
@@ -44,7 +44,15 @@ let description = document.querySelector("#description")
 let image = document.querySelector("#image")
 let modal=document.querySelector(".product-modal")
 let overlay=document.querySelector(".overlay")
+let edit=document.querySelector(".edit")
+let editClose=document.querySelector(".edit-close")
+let editTitle=document.querySelector("#editTitle")
+let editPrice=document.querySelector("#editPrice")
+let editDesc=document.querySelector("#editDescription")
+let editImage=document.querySelector("#editImage")
+let search=document.querySelector("#search")
 
+let products=JSON.parse(localStorage.getItem("products")) || initialProducts
 
 document.addEventListener("DOMContentLoaded", ShowProducts(products))
 
@@ -62,6 +70,7 @@ function ShowProducts(myProducts) {
               <p class="card-text">${myProduct.description.slice(0, 50)}...</p>
               <a href="#" class="btn btn-detail btn-primary"  data-id=${myProduct.id}>Details</a>
               <a href="#" class="btn btn-delete btn-danger" data-id=${myProduct.id}  >Delete</a>
+              <a href="#" class="btn btn-edit btn-warning" data-id=${myProduct.id}  >Edit</a>
             </div>
           </div>
       </div> 
@@ -89,16 +98,15 @@ function ShowProducts(myProducts) {
                         let findedProduct = products.find(product => product.id == id)
                         let index = products.indexOf(findedProduct)
                         products.splice(index, 1)
+                        localStorage.setItem("products",JSON.stringify(products))
                         ShowProducts(products)
-
-
                         Swal.fire({
                             title: "Deleted!",
                             text: "Your file has been deleted.",
                             icon: "success"
                         });
 
-                        row.scrollIntoView({ behavior: 'smooth' })
+                        // row.scrollIntoView({ behavior: 'smooth' })
                     }
                 });
 
@@ -108,7 +116,6 @@ function ShowProducts(myProducts) {
 
 
         let detailBtns=document.querySelectorAll(".btn-detail")
-
         detailBtns.forEach(detailBtn=>{
             detailBtn.addEventListener("click",()=>{
                 modal.classList.replace("d-none","d-block")
@@ -135,12 +142,64 @@ function ShowProducts(myProducts) {
 
          
         })
+
+        let editBtns=document.querySelectorAll(".btn-edit")
+        editBtns.forEach(editBtn=>{
+            editBtn.addEventListener("click",()=>{
+                let id = editBtn.getAttribute("data-id")
+                editProduct(id)
+                // document.body.style.overflow="hidden"
+            })
+        })
+   
+        
     });
 }
 
 
 
+function editProduct(id){
+    let editForm=document.querySelector(".edit-form")
+    overlay.classList.replace("d-none","d-block")
+    edit.classList.replace("d-none","d-block")
+    let findedProduct= products.find(product=>product.id==id)
+    let index=products.indexOf(findedProduct)
+    editTitle.value=findedProduct.title
+    editPrice.value=findedProduct.price
+    editDesc.value=findedProduct.description
+    editImage.value=findedProduct.image
 
+
+    editForm.addEventListener("submit",(e)=>{
+        e.preventDefault()
+
+        let editedProduct={
+            id:id,
+            title:editTitle.value,
+            price:editPrice.value,
+            description:editDesc.value,
+            image:editImage.value
+        }
+
+        products.splice(index,1,editedProduct)
+        localStorage.setItem("products",JSON.stringify(products))
+        ShowProducts(products)
+        overlay.classList.replace("d-block","d-none")
+        edit.classList.replace("d-block","d-none")
+        row.scrollIntoView({ behavior: 'smooth' })
+        
+    })
+}
+
+
+
+
+
+
+editClose.addEventListener("click",()=>{
+    overlay.classList.replace("d-block","d-none")
+    edit.classList.replace("d-block","d-none")
+})
 
 addForm.addEventListener("submit", (event) => {
     event.preventDefault()
@@ -155,6 +214,8 @@ addForm.addEventListener("submit", (event) => {
         }
 
         products.push(newProduct)
+        console.log(products)
+        localStorage.setItem("products", JSON.stringify(products))
         ShowProducts(products)
         Clear()
 
@@ -164,7 +225,8 @@ addForm.addEventListener("submit", (event) => {
             showConfirmButton: false,
             timer: 2500
         });
-        row.scrollIntoView({ behavior: 'smooth' })
+
+        // row.scrollIntoView({ behavior: 'smooth' })
     } else {
         Swal.fire({
             icon: "error",
@@ -197,3 +259,15 @@ window.addEventListener("scroll",()=>{
     header.style.color="black"
    }
 })
+
+
+
+
+search.addEventListener("keyup",()=>{
+    console.log(search.value)
+    let filteredProducts= products.filter(product=>product.title.toLowerCase().trim().includes(search.value.toLowerCase().trim()))
+    ShowProducts(filteredProducts)
+})
+
+
+

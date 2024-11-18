@@ -79,6 +79,15 @@
         li{
             list-style-type: none;
         }
+        .edit{
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            z-index: 20;
+            background-color: white;
+            padding: 10px;
+        }
     </style>
 </head>
 
@@ -115,7 +124,12 @@
                 </div>
                 <button type="submit" class="btn btn-success">Add</button>
             </form>
+        </div>
 
+        <div class="container">        
+        <div class="my-5">
+            <input type="text" class="form-control" id="search" placeholder="search...">
+        </div>
         </div>
 
         <div class="container text-center">
@@ -137,6 +151,34 @@
     
       </div>
     <div class="overlay d-none"></div>
+
+
+
+      
+    <div class="container edit d-none">
+        <h1 class="my-3">Edit Form</h1>
+        <form class="edit-form">
+            <div class="my-3">
+                <label for="editTitle" class="form-label">Title</label>
+                <input type="text" class="form-control" id="editTitle" placeholder="title">
+            </div>
+            <div class="my-3">
+                <label for="editPrice" class="form-label">Price</label>
+                <input type="number" class="form-control" id="editPrice" placeholder="price">
+            </div>
+            <div class="my-3">
+                <label for="editDescription" class="form-label">Description</label>
+                <input type="text" class="form-control" id="editDescription" placeholder="description">
+            </div>
+            <div class="my-3">
+                <label for="editImage" class="form-label">Image</label>
+                <input type="text" class="form-control" id="editImage" placeholder="image">
+            </div>
+            <button type="submit" class="btn btn-success">Edit</button>
+            <button class="close edit-close btn btn-danger"><i class="fa-solid fa-x"></i></button>
+        </form>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 

@@ -7,7 +7,7 @@ let randomNumber=document.querySelector(".random")
 
 // guessForm.addEventListener("submit",(e)=>{
 //     e.preventDefault()
-//      let random= Math.floor(Math.random() * 15) + 1 
+    //  let random= Math.floor(Math.random() * 15) + 1 
 //      let mynumber=input.value
 //      console.log(random)
 //      if((input.value.trim()!=="")){
@@ -104,9 +104,13 @@ guessForm.addEventListener("submit",(e)=>{
      console.log(random)
      if((input.value.trim()!=="")){
          if(mynumber>0 && mynumber<=15){
+
+
                  
                 myNumber.textContent= mynumber
                 randomNumber.textContent= random
+
+
                 if(mynumber==random){
                     Success(alertSuccess,"Qalibsen")
                 }else if(mynumber>random){
@@ -128,7 +132,15 @@ guessForm.addEventListener("submit",(e)=>{
 function Success(alertElement,messagge){
     alertElement.classList.replace("d-none","d-block")
     alertElement.textContent=messagge
-    setTimeout(()=>{
-        alertElement.classList.replace("d-block","d-none")
-    },2000)
+    // setTimeout(()=>{
+    //     alertElement.classList.replace("d-block","d-none")
+    // },2000)
 }
+
+
+
+
+let random= Math.floor(Math.random() * 15 + 1)
+
+
+console.log(random)
