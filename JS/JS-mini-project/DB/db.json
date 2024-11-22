@@ -1,0 +1,76 @@
+{
+  "users": [
+    {
+      "id": "ddb9",
+      "name": "Solomon Pierce",
+      "surname": "Weber",
+      "email": "lelyw@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "isAdmin": false,
+      "favorites": []
+    },
+    {
+      "id": "2532",
+      "name": "",
+      "surname": "",
+      "email": "",
+      "password": "",
+      "isAdmin": false,
+      "favorites": []
+    },
+    {
+      "id": "c247",
+      "name": "Thomas Daugherty",
+      "surname": "Wall",
+      "email": "pene@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "isAdmin": false,
+      "favorites": []
+    },
+    {
+      "id": "e0f1",
+      "name": "Code",
+      "surname": "Hello",
+      "email": "tatijofup@mailinator.com",
+      "password": "12345678",
+      "isAdmin": false,
+      "favorites": []
+    },
+    {
+      "id": "ceed",
+      "name": "Quin Bolton",
+      "surname": "Henson",
+      "email": "teneqabusy@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "isAdmin": false,
+      "favorites": []
+    },
+    {
+      "id": "1998",
+      "name": "Code",
+      "surname": "Hello",
+      "email": "pene@mailinatorR.com",
+      "password": "12345678",
+      "isAdmin": false,
+      "favorites": []
+    },
+    {
+      "id": "fec8",
+      "name": "Vusal",
+      "surname": "Huseynli",
+      "email": "vusal@gmail.com",
+      "password": "12345678",
+      "isAdmin": false,
+      "favorites": []
+    },
+    {
+      "id": "ed4f",
+      "name": "Ahmad",
+      "surname": "Abbasov",
+      "email": "ahmad@gmail.com",
+      "password": "12345678",
+      "isAdmin": false,
+      "favorites": []
+    }
+  ]
+}
