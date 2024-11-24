@@ -10,22 +10,16 @@
       "favorites": []
     },
     {
-      "id": "2532",
-      "name": "",
-      "surname": "",
-      "email": "",
-      "password": "",
-      "isAdmin": false,
-      "favorites": []
-    },
-    {
       "id": "c247",
       "name": "Thomas Daugherty",
       "surname": "Wall",
       "email": "pene@mailinator.com",
       "password": "Pa$$w0rd!",
       "isAdmin": false,
-      "favorites": []
+      "favorites": [
+        "f888",
+        "22cb"
+      ]
     },
     {
       "id": "e0f1",
@@ -71,6 +65,98 @@
       "password": "12345678",
       "isAdmin": false,
       "favorites": []
+    }
+  ],
+  "products": [
+    {
+      "id": "f888",
+      "name": "Only Check Trouser",
+      "price": 70,
+      "description": "Nulla eget sem vitae eros pharetra viverra. Nam vitae luctus ligula. Mauris consequat ornare feugiat.",
+      "colors": [
+        "red",
+        "green",
+        "blue"
+      ],
+      "image": "https://themewagon.github.io/cozastore/images/product-03.jpg",
+      "category": "men",
+      "sizes": [
+        "xs",
+        "s",
+        "m"
+      ]
+    },
+    {
+      "id": "22cb",
+      "name": "Esprit Ruffle Shirt",
+      "price": 70,
+      "description": "Nulla eget sem vitae eros pharetra viverra. Nam vitae luctus ligula. Mauris consequat ornare feugiat.",
+      "colors": [
+        "red",
+        "green",
+        "blue"
+      ],
+      "image": "https://themewagon.github.io/cozastore/images/product-01.jpg",
+      "category": "women",
+      "sizes": [
+        "xs",
+        "s",
+        "m"
+      ]
+    },
+    {
+      "id": "db9e",
+      "name": "Herschel supply",
+      "price": 70,
+      "description": "Nulla eget sem vitae eros pharetra viverra. Nam vitae luctus ligula. Mauris consequat ornare feugiat.",
+      "colors": [
+        "red",
+        "green",
+        "blue"
+      ],
+      "image": "https://themewagon.github.io/cozastore/images/product-02.jpg",
+      "category": "women",
+      "sizes": [
+        "xs",
+        "s",
+        "m"
+      ]
+    },
+    {
+      "id": "2215",
+      "name": "Only Check Trouser",
+      "price": 70,
+      "description": "Nulla eget sem vitae eros pharetra viverra. Nam vitae luctus ligula. Mauris consequat ornare feugiat.",
+      "colors": [
+        "red",
+        "green",
+        "blue"
+      ],
+      "image": "https://themewagon.github.io/cozastore/images/product-03.jpg",
+      "category": "women",
+      "sizes": [
+        "xs",
+        "s",
+        "m"
+      ]
+    },
+    {
+      "id": "39a3",
+      "name": "Classic Trench Coat",
+      "price": 70,
+      "description": "Nulla eget sem vitae eros pharetra viverra. Nam vitae luctus ligula. Mauris consequat ornare feugiat.",
+      "colors": [
+        "red",
+        "green",
+        "blue"
+      ],
+      "image": "https://themewagon.github.io/cozastore/images/product-03.jpg",
+      "category": "women",
+      "sizes": [
+        "xs",
+        "s",
+        "m"
+      ]
     }
   ]
 }

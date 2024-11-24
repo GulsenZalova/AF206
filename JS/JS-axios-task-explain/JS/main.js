@@ -26,10 +26,8 @@ function GetData(){
 
 GetData()
 
-
-
-
 function ShowSuppliers(array){
+    console.log(array)
     row.innerHTML=""
     array.forEach(element => {
         row.innerHTML+=`

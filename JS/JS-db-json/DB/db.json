@@ -1,0 +1,36 @@
+{
+  "products": [
+    {
+      "name": "Milla",
+      "price": 6,
+      "id": "4bb3"
+    },
+    {
+      "id": "e40d",
+      "name": "Atena",
+      "price": 6
+    },
+    {
+      "id": "1",
+      "name": "Atena2",
+      "price": 6
+    },
+    {
+      "id": "6bff",
+      "name": "Atena5",
+      "price": 6
+    },
+    {
+      "id": "5",
+      "name": "Atena15",
+      "price": 6
+    },
+    {
+      "id": "75dd",
+      "name": "Atena155",
+      "price": 6
+    }
+  ]
+
+
+}

@@ -11,6 +11,7 @@ GetSupplierById(Base,id)
 
 
 function ShowSupplier(obj){
+  console.log(obj)
     console.log(obj)
     container.innerHTML=`
 
