@@ -1,0 +1,9 @@
+body{
+  background-color: aqua;
+  color: blue;
+}
+
+.products{
+  display: flex;
+  gap: 20px;
+}
