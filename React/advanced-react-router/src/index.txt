@@ -1,0 +1,34 @@
+<Routes>
+{/* User Route */}
+  <Route path="/" element={<UserRoot/>}>
+    <Route index element={<Home/>}/>
+    {/* <Route path="/products" element={<Products/>}/>
+    <Route path="/products/:id" element={<ProductDetail/>}/> */}
+    {/* Nested Route */}
+    <Route path="/products">
+      <Route index element={<Products/>}/>
+      <Route path=":id" element={<ProductDetail/>}/>
+    </Route>
+    <Route path="/basket" element={<Basket/>}/>
+    <Route path="/favorites" element={<Favorites/>}/>
+    <Route path="*" element={<NoPage/>}/>
+  </Route>
+  
+    {/* Admin Root */}
+
+    <Route path="/admin" element={<AdminRoot/>}>
+      <Route index element={<DashBoard/>}/>
+      {/* <Route path="/products" element={<AdminProducts/>}/>
+      <Route path="/products/:id" element={<AdminProductDetail/>}/>
+      <Route path="/products/addproduct" element={<AddProduct/>}/>
+      <Route path="/products/editproduct" element={<EditProduct/>}/> */}
+      <Route path="products">
+        {/* Nested Router */}
+        <Route index element={<AdminProducts/>}/>
+        <Route path=":id" element={<AdminProductDetail/>}/>
+      <Route path="addproduct" element={<AddProduct/>}/>
+      <Route path="editproduct" element={<EditProduct/>}/>
+      </Route>
+    </Route>
+
+</Routes>
