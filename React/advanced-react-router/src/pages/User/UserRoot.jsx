@@ -7,7 +7,7 @@ function UserRoot() {
     <>
     <UserNavbar/>
     <Outlet/>
-    <UserFooter/>
+    {/* <UserFooter/> */}
       
     </>
   )
