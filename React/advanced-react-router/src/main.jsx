@@ -3,14 +3,14 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
 import ProductsProvider from "./context/ProductsContext"
-import FavoritesProvider from "./context/FavoritesContext"
+import FavoriteProvider from './context/FavoritesContext'
 import BasketProvider from "./context/BasketContext"
 createRoot(document.getElementById('root')).render(
 <BasketProvider>
-<FavoritesProvider>
+<FavoriteProvider>
    <ProductsProvider>
     <App />
   </ProductsProvider>
- </FavoritesProvider>
+</FavoriteProvider>
 </BasketProvider>,
 )

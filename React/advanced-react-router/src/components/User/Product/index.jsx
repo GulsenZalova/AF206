@@ -9,21 +9,14 @@ import { Grid } from '@mui/system';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { IconButton } from '@mui/material';
-import { favoriteContext } from '../../../context/FavoritesContext';
+
 import { useContext } from 'react';
 import { basketContext } from '../../../context/BasketContext';
+import { favoriteContext } from '../../../context/FavoritesContext';
 function Product({product}) {
-    let  {favorites,setFavorites}=useContext(favoriteContext)
-    let {basket,setBasket}=useContext(basketContext)
-    function handleAddFavorite(product){
-        let findFavorite=favorites.find(favorite=>favorite.id==product.id)
-        if(findFavorite){
-            alert("Bu mehsul artiq favoritesde movducddur")
-        }else{
-            setFavorites([...favorites,product])
-        }
 
-    }
+    let {basket,setBasket}=useContext(basketContext)
+    let {favorite,setFavorite}=useContext(favoriteContext)
 
 
     function handleAddBasket(product){
@@ -35,6 +28,18 @@ function Product({product}) {
             setBasket([...basket,{...product,count:1}])
            
         }
+    }
+
+
+
+    function handleAddFavorite(product){
+       let findFavorite= favorite.find(item=>item.id==product.id)
+
+       if(findFavorite){
+          alert("artiq senin wishlistinde bu mehsul var bir de elave eliye bilmersen")
+       }else{
+          setFavorite([...favorite,product])
+       }
     }
   return (
     <Grid size={3}>
@@ -54,7 +59,7 @@ function Product({product}) {
       </Typography>
     </CardContent>
     <CardActions>
-      <IconButton onClick={()=>handleAddFavorite(product)}><FavoriteBorderIcon/></IconButton>
+      <IconButton  onClick={()=>handleAddFavorite(product)} ><FavoriteBorderIcon/></IconButton>
       <IconButton onClick={()=>handleAddBasket(product)}><ShoppingCartIcon/></IconButton>
     </CardActions>
   </Card>

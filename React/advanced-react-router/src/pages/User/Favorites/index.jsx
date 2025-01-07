@@ -11,35 +11,38 @@ import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { IconButton } from '@mui/material';
 import { useContext } from 'react'
-import { favoriteContext } from '../../../context/FavoritesContext'
+
 import DisabledByDefaultIcon from '@mui/icons-material/DisabledByDefault';
 import style from "./style.module.css"
+import { favoriteContext } from '../../../context/FavoritesContext';
 function Favorites() {
-  let { favorites,setFavorites } = useContext(favoriteContext)
-  function  handleDeleteFavorite(id){
-    let deleteFavorite=favorites.filter(favorite=>favorite.id!==id)
-    setFavorites(deleteFavorite)
+
+  let {favorite,setFavorite}=useContext(favoriteContext)
+
+
+  function handleDeleteFavorite(id){
+      let filteredFavorite=favorite.filter(item=>item.id!==id)
+      setFavorite(filteredFavorite)
   }
   return (
 
     <Box sx={{ flexGrow: 1 }} my={5}>
-    {
-      favorites.length==0 ? (
-        <h2 className={style.head}>Sizin Favoritesiniz Boşdur</h2>
-      ): (
+
         <Grid2 container spacing={2}>
-        {
-          favorites.map(favorite => (
+        
+         {
+          favorite.map(item=>(
+            
             <Grid size={3}>
               <Card sx={{ maxWidth: 345 }}>
                 <CardMedia
                   sx={{ height: 140 }}
-                  image={favorite.image}
+                  image={item.image}
                   title="green iguana"
                 />
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="div">
-                    {favorite.title}
+                    {item.title}
                   </Typography>
                   <Typography variant="body2" sx={{ color: 'text.secondary' }}>
                     Lizards are a widespread group of squamate reptiles, with over 6,000
@@ -47,15 +50,16 @@ function Favorites() {
                   </Typography>
                 </CardContent>
                 <CardActions>
-                  <IconButton onClick={()=>handleDeleteFavorite(favorite.id)}><DisabledByDefaultIcon /></IconButton>
+                  <IconButton onClick={()=>handleDeleteFavorite(item.id)}><DisabledByDefaultIcon /></IconButton>
                 </CardActions>
               </Card>
             </Grid>
           ))
-        }
+         }
+     
       </Grid2>
-      )
-    }
+    
+    
     </Box>
   )
 }

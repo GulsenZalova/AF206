@@ -1,21 +1,29 @@
-import { useEffect, useState } from "react";
-import { createContext } from "react";
+// context (datani lazim olan yere catdiran) (createcontext)
+// provider (datani temin eden)
+
+// App Componentini Prov ider ile ehatelemek
+
+import { createContext, useEffect, useState } from "react";
+
 export let favoriteContext = createContext()
 
-function FavotiteProvider({children}){
-    let localFavorite=JSON.parse(localStorage.getItem("favorites"))
-    let [favorites,setFavorites]=useState(localFavorite ? localFavorite : [])
+
+ function FavoriteProvider({children}){
+    let localFavorite=JSON.parse(localStorage.getItem("favorite"))
+    let [favorite,setFavorite]=useState(localFavorite ? localFavorite :[])
 
     useEffect(()=>{
-        localStorage.setItem("favorites",JSON.stringify(favorites))
-    },[favorites])
+        localStorage.setItem("favorite",JSON.stringify(favorite))
+    },[favorite])
+
 
     let value={
-        favorites,
-        setFavorites
+        favorite,
+        setFavorite
     }
-    return <favoriteContext.Provider value={value}>{children}</favoriteContext.Provider>
-}
+     return  <favoriteContext.Provider value={value}>{children}</favoriteContext.Provider>
+
+ }
 
 
-export default FavotiteProvider
+ export default FavoriteProvider

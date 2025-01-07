@@ -8,10 +8,12 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from 'react-router-dom';
 import { favoriteContext } from '../../../context/FavoritesContext';
+
 import { useContext } from 'react';
 import { basketContext } from '../../../context/BasketContext';
 function UserNavbar() {
-  let {favorites}=useContext(favoriteContext)
+
+  let {favorite}=useContext(favoriteContext)
   let {basket}=useContext(basketContext)
   return (
     <>
@@ -32,7 +34,7 @@ function UserNavbar() {
           </Typography>
           <Link to={"/products"} color="inherit">Products</Link>
           <Link to={"/favorites"} color="inherit">Favorites</Link>
-          <span>{favorites.length}</span>
+          <span>{favorite.length}</span>
           <Link to={"/basket"} color="inherit">Basket</Link>
           <span>{basket.length}</span>
         </Toolbar>
