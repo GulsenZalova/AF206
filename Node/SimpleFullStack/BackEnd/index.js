@@ -1,13 +1,13 @@
-const express=require("express")
+import express from "express"
 const app=express()
-const bodyParser=require("body-parser")
-const cors=require("cors")
-const dotenv=require("dotenv")
-let mongoose=require("mongoose")
+import { json } from "body-parser"
+import cors from "cors"
+import { config } from "dotenv"
+import { Schema, model, connect } from "mongoose"
 
-app.use(bodyParser.json())
+app.use(json())
 app.use(cors())
-dotenv.config()
+config()
 
 
 app.get("/",(req,res)=>{
@@ -15,7 +15,7 @@ app.get("/",(req,res)=>{
 })
 
 
-let ProductSchema = new mongoose.Schema({
+let ProductSchema = new Schema({
     name:String,
     description:String,
     price:Number,
@@ -23,7 +23,7 @@ let ProductSchema = new mongoose.Schema({
     image:String
 })
 
-let ProductModel= mongoose.model("products",ProductSchema)
+let ProductModel= model("products",ProductSchema)
 
 
 
@@ -60,7 +60,14 @@ app.post("/products", async (req,res)=>{
 })
 
 
-mongoose.connect(process.env.ConnetionString)
+app.put("/products/:id", async (req,res)=>{
+    let id=req.params.id
+    let updateProduct=req.body
+  let updatedProduct = await ProductModel.findByIdAndUpdate({_id:id},updateProduct,{new:true})
+    res.send(updatedProduct)
+})
+
+connect(process.env.ConnetionString)
 .then(()=>{
     console.log("connected")
 })
